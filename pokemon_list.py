@@ -3,7 +3,7 @@ import pandas as pd
 
 def get_pokemons(url='https://pokeapi.co/api/v2/pokemon-form/?limit=1118'):
 #get pokemons from api and return a dictionary
-	i=1
+	i_id=1
 	pokeDict = dict()
 	response = requests.get(url)
 	if response.status_code == 200:
@@ -13,10 +13,11 @@ def get_pokemons(url='https://pokeapi.co/api/v2/pokemon-form/?limit=1118'):
 		results = payload.get('results', [])
 
 		if results:
+			#if list not empty, iterate it
 			for pokemon in results:
 				name = pokemon ['name']
-				pokeDict[i] = name
-				i+=1
+				pokeDict[i_id] = name
+				i_id+=1
 
 		return pokeDict
 
