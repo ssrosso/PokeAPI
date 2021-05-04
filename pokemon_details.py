@@ -45,6 +45,7 @@ poke_df = pd.DataFrame({
 poke_df.to_csv('pokemon_details.csv')
 
 """
+#another way to do the same more directly would be...
 
 def get_pokemons(url = 'https://pokeapi.co/api/v2/pokemon/'):
 	poke_df = pd.DataFrame(columns = ['id','name', 'weight', 'height', 'base_hp'])
