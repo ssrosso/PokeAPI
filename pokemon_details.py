@@ -44,7 +44,6 @@ poke_df = pd.DataFrame({
 
 poke_df.to_csv('pokemon_details.csv')
 
-q = "commit test issue"
 """
 #another way to do the same more directly would be...
 
